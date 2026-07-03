@@ -84,7 +84,7 @@
 
 
 
-***```***
+```
 
 ***.***
 
@@ -100,7 +100,7 @@
 
 ***│── README.md***
 
-***```***
+```
 
 
 
@@ -116,15 +116,15 @@
 
 
 
-***```bash***
+```bash
 
-***git clone https://github.com/yourusername/AI-Research-Assistant.git***
+***git clone https://github.com/JenilMangukiya08/AI_Research_Assistant.git***
 
 
 
 ***cd AI-Research-Assistant***
 
-***```***
+```
 
 
 
@@ -132,11 +132,11 @@
 
 
 
-***```bash***
+```bash
 
 ***python -m venv venv***
 
-***```***
+```
 
 
 
@@ -148,11 +148,11 @@
 
 
 
-***```bash***
+```bash
 
 ***venv\\Scripts\\activate***
 
-***```***
+```
 
 
 
@@ -160,11 +160,11 @@
 
 
 
-***```bash***
+```bash
 
 ***source venv/bin/activate***
 
-***```***
+```
 
 
 
@@ -172,11 +172,11 @@
 
 
 
-***```bash***
+```bash
 
 ***pip install -r requirements.txt***
 
-***```***
+```
 
 
 
@@ -192,11 +192,11 @@
 
 
 
-***```***
+```
 
 ***.env***
 
-***```***
+```
 
 
 
@@ -204,11 +204,11 @@
 
 
 
-***```env***
+```env
 
 ***GROK\_API\_KEY=your\_groq\_api\_key\_here***
 
-***```***
+```
 
 
 
@@ -226,11 +226,11 @@
 
 
 
-***```bash***
+```bash
 
-***python Agent\_chatbot.py***
+***python AI_Bot.py***
 
-***```***
+```
 
 
 
@@ -238,7 +238,7 @@
 
 
 
-***```***
+```
 
 ***Ask: calculate 25\*80***
 
@@ -254,7 +254,7 @@
 
 ***Ask: read notes.txt***
 
-***```***
+```
 
 
 
@@ -262,11 +262,11 @@
 
 
 
-***```***
+```
 
 ***exit***
 
-***```***
+```
 
 
 
@@ -282,11 +282,11 @@
 
 
 
-***```bash***
+```bash
 
 ***streamlit run dashboard.py***
 
-***```***
+```
 
 
 
@@ -326,11 +326,11 @@
 
 
 
-***```***
+```
 
 ***summarize ML.pdf***
 
-***```***
+```
 
 
 
@@ -350,11 +350,11 @@
 
 
 
-***```***
+```
 
 ***read notes.txt***
 
-***```***
+```
 
 
 
@@ -374,11 +374,11 @@
 
 
 
-***```***
+```
 
 ***calculate (45\*98)+100***
 
-***```***
+```
 
 
 
@@ -398,7 +398,7 @@
 
 
 
-***```***
+```
 
 ***latest AI news***
 
@@ -410,7 +410,7 @@
 
 ***USD to INR exchange rate***
 
-***```***
+```
 
 
 
@@ -440,11 +440,11 @@
 
 
 
-***```***
+```
 
 ***logs.json***
 
-***```***
+```
 
 
 
@@ -456,7 +456,7 @@
 
 
 
-***```***
+```
 
 &#x20;         ***User Query***
 
@@ -488,7 +488,7 @@
 
 &#x20;        ***Save Query Logs***
 
-***```***
+```
 
 
 
