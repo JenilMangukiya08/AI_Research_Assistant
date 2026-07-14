@@ -1,542 +1,234 @@
-***# 🤖 AI Research Assistant***
+# 🤖 AI Research Assistant
 
+<p align="center">
 
+![Python](https://img.shields.io/badge/Python-3.11-blue?style=for-the-badge\&logo=python)
+![LangGraph](https://img.shields.io/badge/LangGraph-Agent_Workflow-success?style=for-the-badge)
+![LangChain](https://img.shields.io/badge/LangChain-Framework-green?style=for-the-badge)
+![Groq](https://img.shields.io/badge/Groq-LLM-orange?style=for-the-badge)
+![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-red?style=for-the-badge)
+![DuckDuckGo](https://img.shields.io/badge/DuckDuckGo-Web_Search-yellow?style=for-the-badge)
 
-***An AI-powered Research Assistant built using \*\*LangGraph\*\*, \*\*LangChain\*\*, and \*\*Groq LLM\*\* that intelligently answers user queries by selecting the appropriate tool.***
+</p>
 
+An **AI-powered Research Assistant** built using **LangGraph**, **LangChain**, and **Groq LLM** that intelligently routes user queries to the appropriate tool. The assistant can summarize PDFs, read local files, perform web searches, solve mathematical expressions, and monitor usage through a Streamlit analytics dashboard.
 
+---
 
-***The assistant can:***
+# ✨ Features
 
-***- 📄 Read and summarize PDF files***
+* 🤖 LangGraph Agent Workflow
+* 🧠 Intelligent Tool Selection
+* 📄 PDF Summarization
+* 📁 Local File Reader
+* 🌐 Real-time Web Search (DuckDuckGo)
+* 🧮 Mathematical Calculator
+* 📊 Query Logging
+* ⏱️ Latency Tracking
+* 📈 Streamlit Analytics Dashboard
+* 🔄 Modular & Extensible Architecture
 
-***- 📁 Read local text files***
+---
 
-***- 🌐 Search the web for real-time information***
+# 🏗️ Workflow
 
-***- 🧮 Perform mathematical calculations***
+```mermaid
+flowchart TD
 
-***- 📊 Track query latency and tool usage using a Streamlit dashboard***
+A[User Query] --> B[LangGraph Agent]
 
+B --> C{Select Tool}
 
+C --> D[PDF Reader]
+C --> E[File Reader]
+C --> F[Web Search]
+C --> G[Calculator]
 
-***---***
+D --> H[Groq LLM]
+E --> H
+F --> H
+G --> H
 
-
-
-***# Features***
-
-
-
-***- LangGraph Agent Workflow***
-
-***- Automatic Tool Selection***
-
-***- PDF Reader***
-
-***- Local File Reader***
-
-***- DuckDuckGo Web Search***
-
-***- Calculator Tool***
-
-***- Query Logging***
-
-***- Latency Tracking***
-
-***- Tool Usage Analytics***
-
-***- Streamlit Dashboard***
-
-
-
-***---***
-
-
-
-***# Tech Stack***
-
-
-
-***- Python***
-
-***- LangGraph***
-
-***- LangChain***
-
-***- Groq API***
-
-***- Streamlit***
-
-***- DuckDuckGo Search***
-
-***- PyPDF***
-
-***- Pandas***
-
-
-
-***---***
-
-
-
-***# Project Structure***
-
-
-
+H --> I[Final Response]
+I --> J[Log Query & Metrics]
 ```
 
-***.***
+---
 
-***│── Agent\_chatbot.py      # Main AI Agent***
+# ⚙️ Tech Stack
 
-***│── dashboard.py          # Streamlit Dashboard***
+| Category       | Technologies         |
+| -------------- | -------------------- |
+| Language       | Python               |
+| AI Framework   | LangChain, LangGraph |
+| LLM            | Groq (Llama 3.x)     |
+| Dashboard      | Streamlit            |
+| Search         | DuckDuckGo Search    |
+| PDF Processing | PyPDF                |
+| Data Analysis  | Pandas               |
 
-***│── logs.json             # Stores query logs***
+---
 
-***│── requirements.txt***
+# 📁 Project Structure
 
-***│── .env***
+```text
+AI_Research_Assistant/
 
-***│── README.md***
-
+├── Agent_chatbot.py        # Main AI Agent
+├── dashboard.py            # Streamlit Dashboard
+├── logs.json               # Query Logs
+├── requirements.txt
+├── .env.example
+└── README.md
 ```
 
+---
 
+# 🚀 Installation
 
-***---***
-
-
-
-***# Installation***
-
-
-
-***Clone the repository***
-
-
+### Clone the repository
 
 ```bash
-
-***git clone https://github.com/JenilMangukiya08/AI_Research_Assistant.git***
-
-
-
-***cd AI-Research-Assistant***
-
+git clone https://github.com/JenilMangukiya08/AI_Research_Assistant.git
 ```
 
-
-
-***Create Virtual Environment***
-
-
+### Navigate to the project
 
 ```bash
-
-***python -m venv venv***
-
+cd AI_Research_Assistant
 ```
 
-
-
-***Activate it***
-
-
-
-***Windows***
-
-
+### Create a virtual environment
 
 ```bash
-
-***venv\\Scripts\\activate***
-
+python -m venv venv
 ```
 
+### Activate the virtual environment
 
-
-***Linux/Mac***
-
-
+**Windows**
 
 ```bash
-
-***source venv/bin/activate***
-
+venv\Scripts\activate
 ```
 
-
-
-***Install dependencies***
-
-
+**Linux / macOS**
 
 ```bash
-
-***pip install -r requirements.txt***
-
+source venv/bin/activate
 ```
 
+### Install dependencies
 
-
-***---***
-
-
-
-***# Environment Variables***
-
-
-
-***Create a file named***
-
-
-
+```bash
+pip install -r requirements.txt
 ```
 
-***.env***
+---
 
-```
+# 🔑 Environment Variables
 
-
-
-***Add your Groq API key***
-
-
+Create a `.env` file in the project root.
 
 ```env
-
-***GROK\_API\_KEY=your\_groq\_api\_key\_here***
-
+GROQ_API_KEY=your_groq_api_key
 ```
 
+---
 
-
-***> Get your API key from:***
-
-***> https://console.groq.com/keys***
-
-
-
-***---***
-
-
-
-***# Running the AI Assistant***
-
-
+# ▶️ Run the AI Assistant
 
 ```bash
-
-***python AI_Bot.py***
-
+python Agent_chatbot.py
 ```
 
+---
 
-
-***Example***
-
-
-
-```
-
-***Ask: calculate 25\*80***
-
-
-
-***Ask: summarize ML.pdf***
-
-
-
-***Ask: who is the CEO of Apple?***
-
-
-
-***Ask: read notes.txt***
-
-```
-
-
-
-***Type***
-
-
-
-```
-
-***exit***
-
-```
-
-
-
-***to stop the chatbot.***
-
-
-
-***---***
-
-
-
-***# Running the Dashboard***
-
-
+# 📊 Run the Dashboard
 
 ```bash
-
-***streamlit run dashboard.py***
-
+streamlit run dashboard.py
 ```
 
+The dashboard provides:
 
+* Total Queries
+* Average Latency
+* Query History
+* Tool Usage Statistics
+* Latency Visualization
 
-***The dashboard displays:***
+---
 
-
-
-***- Total Queries***
-
-***- Average Latency***
-
-***- Query History***
-
-***- Tool Usage***
-
-***- Latency Graph***
-
-
-
-***---***
-
-
-
-***# Available Tools***
-
-
-
-***### PDF Reader***
-
-
-
-***Reads and summarizes local PDF files.***
-
-
-
-***Example***
-
-
+# 💬 Example Queries
 
 ```
+Summarize ML.pdf
 
-***summarize ML.pdf***
+Read notes.txt
 
+Calculate (45 * 98) + 100
+
+Latest AI news
+
+Who is the CEO of Apple?
+
+USD to INR exchange rate
 ```
 
+Type `exit` to close the assistant.
 
+---
 
-***---***
+# 🛠️ Available Tools
 
+| Tool           | Description                        |
+| -------------- | ---------------------------------- |
+| 📄 PDF Reader  | Reads and summarizes PDF documents |
+| 📁 File Reader | Reads local text files             |
+| 🌐 Web Search  | Searches the web using DuckDuckGo  |
+| 🧮 Calculator  | Solves mathematical expressions    |
 
+---
 
-***### File Reader***
+# 📋 Logging
 
+Every query is automatically recorded with:
 
+* User Query
+* Selected Tool
+* Response Time
+* Timestamp
 
-***Reads local text files.***
+Logs are stored in:
 
-
-
-***Example***
-
-
-
+```text
+logs.json
 ```
 
-***read notes.txt***
+---
 
-```
+# 🚀 Future Improvements
 
+* Conversation Memory
+* Multi-PDF Support
+* Retrieval-Augmented Generation (RAG)
+* Voice Assistant
+* Database Integration
+* Authentication & User Management
+* Docker Deployment
+* REST API Support
 
+---
 
-***---***
+# 👨‍💻 Author
 
+**Jenil Mangukiya**
 
+**AI/ML Engineer • Generative AI Developer • Python Developer**
 
-***### Calculator***
+---
 
+## ⭐ Support
 
-
-***Evaluates mathematical expressions.***
-
-
-
-***Example***
-
-
-
-```
-
-***calculate (45\*98)+100***
-
-```
-
-
-
-***---***
-
-
-
-***### Web Search***
-
-
-
-***Searches the internet using DuckDuckGo.***
-
-
-
-***Example***
-
-
-
-```
-
-***latest AI news***
-
-
-
-***who is the CEO of Apple***
-
-
-
-***USD to INR exchange rate***
-
-```
-
-
-
-***---***
-
-
-
-***# Logging***
-
-
-
-***Every query is automatically logged with:***
-
-
-
-***- User Query***
-
-***- Response Time***
-
-***- Tool Used***
-
-***- Timestamp***
-
-
-
-***Logs are stored in***
-
-
-
-```
-
-***logs.json***
-
-```
-
-
-
-***---***
-
-
-
-***# Sample Workflow***
-
-
-
-```
-
-&#x20;         ***User Query***
-
-&#x20;              ***│***
-
-&#x20;              ***▼***
-
-&#x20;         ***LangGraph Agent***
-
-&#x20;              ***│***
-
-&#x20;     ***┌────────┼─────────┐***
-
-&#x20;     ***▼        ▼         ▼***
-
-&#x20;***Calculator  PDF Tool  Search Tool***
-
-&#x20;     ***│        │         │***
-
-&#x20;     ***└────────┼─────────┘***
-
-&#x20;              ***▼***
-
-&#x20;       ***Final AI Response***
-
-&#x20;              ***│***
-
-&#x20;              ***▼***
-
-&#x20;        ***Save Query Logs***
-
-```
-
-
-
-***---***
-
-
-
-***# Future Improvements***
-
-
-
-***- Chat History***
-
-***- Memory Support***
-
-***- Multi-PDF Retrieval***
-
-***- RAG Integration***
-
-***- Voice Assistant***
-
-***- Database Logging***
-
-***- Authentication***
-
-***- Docker Support***
-
-
-
-***---***
-
-
-
-***# Author***
-
-
-
-***Jenil Mangukiya***
-
-
-
-***---***
-
-
-
-***# License***
-
-
-
-***This project is licensed under the MIT License.***
-
+If you found this project useful, consider giving it a **⭐ Star** on GitHub.
